@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+}
+#keyboard {
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    columns: 6;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px black;
+    border-radius: 15%;
+}
+
+.key{
+    display: flex;
+    flex-direction: column;
+    font-variant: small-caps;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 15px 35px;
+    border-radius: 12%;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.469);
+    border-color: rgba(128, 128, 128, 0.469);
+}
+
+.playing{
+    transform: scale(1.2);
+    border-color: cadetblue;
+    box-shadow: 0 0 10px cadetblue;
+}
+
+.sound {
+    font-size: small;
+}

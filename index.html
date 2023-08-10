@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./build/main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>TSDrums</title>
+</head>
+<body>
+    <header>
+        <h1>TS Drums</h1>
+    </header>
+    
+    <div id="keyboard">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">kick</span>
+        </div>
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hi-hat</span>
+        </div>
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">ride</span>
+        </div>
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">clap</span>
+        </div>
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">cymbal</span>
+        </div>
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">snare</span>
+        </div>
+    </div>
+
+    <audio src="./public/Bass-Drum-1.wav">Kick</audio>
+    <audio src="./public/Hip-Hop-Snare-1.wav">Snare</audio>
+    <audio src="./public/Kawai-K1r-Ride-Cymbal.wav">Ride</audio>
+    <audio src="./public/Clap-1.wav">Clap</audio>
+    <audio src="./public/Closed-Hi-Hat-1.wav">Hi-Hat</audio>
+    <audio src="./public/Bass-Drum-1.wav">Cymbal</audio>
+</body>
+</html>
