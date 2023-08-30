@@ -10,21 +10,16 @@ function keyPress(e: KeyboardEvent) {
     audio.currentTime = 0; // resets audio to start each keypress, allowing multiple successive keypresses 
     audio.play();
     changeClassToPlaying(e);
-    // changeClassToNotPlaying(e);
+
+    const keys = document.querySelectorAll('.key');
+    // keys.forEach(key => {key.addEventListener('transitionend', removeTransition)})
 }
 
 // function to toggle on the 'playing' class on the button pressed, then toggle off after set interval
 const changeClassToPlaying = (e: KeyboardEvent) => {
     const key: HTMLElement | null= document.querySelector(`.key[data-key="${e.keyCode}"`);
     key?.classList.toggle('playing');
+
+    setTimeout(()=> {key?.classList.toggle('playing')}, 200)
 }
 
-const keys = document.querySelectorAll('.key');
-keys.forEach(key => {key.addEventListener('transitionend', removeTransition)})
-
-const removeTransition = (e) => {
-    console.log(e)
-}
-
-// const changeClassToNotPlaying = (e: KeyboardEvent) => {
-// }

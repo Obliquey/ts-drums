@@ -9,17 +9,12 @@ function keyPress(e) {
     audio.currentTime = 0; // resets audio to start each keypress, allowing multiple successive keypresses 
     audio.play();
     changeClassToPlaying(e);
-    // changeClassToNotPlaying(e);
+    const keys = document.querySelectorAll('.key');
+    // keys.forEach(key => {key.addEventListener('transitionend', removeTransition)})
 }
 // function to toggle on the 'playing' class on the button pressed, then toggle off after set interval
 const changeClassToPlaying = (e) => {
     const key = document.querySelector(`.key[data-key="${e.keyCode}"`);
     key === null || key === void 0 ? void 0 : key.classList.toggle('playing');
+    setTimeout(() => { key === null || key === void 0 ? void 0 : key.classList.toggle('playing'); }, 200);
 };
-const keys = document.querySelectorAll('.key');
-keys.forEach(key => { key.addEventListener('transitionend', removeTransition); });
-const removeTransition = (e) => {
-    console.log(e);
-};
-// const changeClassToNotPlaying = (e: KeyboardEvent) => {
-// }
